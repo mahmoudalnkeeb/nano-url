@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>nano-url</title>
+  </head>
+  <body>
+    <div class="main">
+      <span class="error-message" id="error"> </span>
+      <span class="success-message" id="success"></span>
+      <div class="form">
+        <input type="text" class="nanonize-input" id="nanonizeInput" placeholder="Enter URL here..." required autocomplete="off"/>
+        <button class="nanonize-btn" id="nanonizeBtn">Nanonize</button>
+      </div>
+      <div class="result">
+        <input
+          type="text"
+          class="result-input"
+          id="resultInput"
+          placeholder="Your nanonized URL will appear here - Note: click to copy!"
+          readonly
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

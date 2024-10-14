@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: hsl(80, 100%, 98%);
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.form {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.result {
+  width: 90%;
+  max-width: 500px;
+  align-items: center;
+  padding: 10px;
+}
+
+input[type='text'].nanonize-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  outline: 1px solid hsl(80, 79%, 17%);
+  background-color: transparent;
+  transition: all ease-in 100ms;
+}
+
+input[type='text'].errored {
+  outline: 1px solid tomato !important;
+}
+input[type='text'].errored:focus {
+  background-color: tomato !important;
+  color: ghostwhite !important;
+}
+
+.error-message {
+  color: white;
+  font-size: 14px;
+  display: block;
+  visibility: hidden;
+  text-align: center;
+  background-color: rgba(241, 65, 34, 0.838);
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.success-message {
+  color: white;
+  font-size: 14px;
+  visibility: hidden;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: hsla(80, 81%, 26%, 0.828);
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.show {
+  visibility: visible;
+}
+
+input[type='text'].nanonize-input:focus {
+  background-color: hsl(80, 79%, 17%);
+  color: ghostwhite;
+}
+
+button.nanonize-btn {
+  min-width: fit-content;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  background-color: hsl(80, 80.5%, 26.5%);
+  color: ghostwhite;
+  cursor: pointer;
+  transition: all ease-in 100ms;
+}
+
+button.nanonize-btn:hover {
+  outline: 1px solid hsl(80, 80.5%, 26.5%);
+  color: hsl(80, 80.5%, 26.5%);
+  background-color: ghostwhite;
+}
+
+.result-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid hsl(80, 80.5%, 26.5%);
+  background-color: hsl(80, 100%, 95%);
+  color: hsl(81, 95%, 15%);
+  transition: background-color 100ms;
+  cursor: pointer;
+}
+
+.result-input:focus {
+  background-color: hsl(80, 80.5%, 85%);
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  input[type='text'].nanonize-input {
+    padding: 10px;
+  }
+
+  button.nanonize-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .result {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .form {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+  .form {
+    flex-direction: column;
+  }
+}
